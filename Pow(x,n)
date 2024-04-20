@@ -1,0 +1,77 @@
+#inlude<stdio.h>
+double myPow(double x,int n);
+int main()
+{	
+    double m,xi;
+    int ni;
+    printf("x = ");
+    scanf("%lf",&xi);
+    printf("n = ");
+    scanf("%d",&ni);
+    m=myPow(xi,ni);
+    printf("%lf",m);
+    return 0;
+}
+double myPow(double x, int n) 
+{
+    double y=1;
+    int i;
+    //printf
+    //scanf
+    //printf
+    //scanf
+    if(x>100.0&&x<-100.0)
+    {
+        //printf("输入错误");
+        return 0;
+    }
+    else
+    {
+        if(n==0)
+        {
+            y=1;
+            //printf("%lf",y);
+        }
+        else
+        {
+            if(n==1)
+            {
+                y=x;
+                //printf("%lf",y);
+            }
+            else
+            {
+                if(n>=2)
+                {
+                    for(i=1;i<=n;i++)
+                    {
+                        y=y*x;
+                    }
+                    //printf("%lf",y);
+                }
+            }
+
+        }
+        if(n==-1)
+        {
+            y=1/x;
+            //printf("%lf",y);
+        }
+        else
+        {
+            if(n<=-2)
+            {
+                for(i=2;i<=-n;i++)
+                {
+                    y=y*x;
+                }
+                y=1/y;
+                //printf("%lf",y);
+            }
+        }
+
+    }
+
+
+    return y;
+}
